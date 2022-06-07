@@ -1,5 +1,13 @@
 # NodeJS Cookbook Changelog
 
+## 4007.3.3 - Unique version
+
+Due to changes with newer version of NPM, and the fact running headless/non-interactive on MacOS, the following unique changes are required.
+
+- Revert to allow for Chef 13. This has been verified as functioning
+- Compensate for NPM CLI deprecating -global, move to recommended --location=global param
+- Pass environment to `npm list` to better mimic what `npm install` does
+
 ## 7.3.3 - *2021-08-30*
 
 - Standardise files with files in sous-chefs/repo-management

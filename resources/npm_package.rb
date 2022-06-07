@@ -81,7 +81,7 @@ action_class do
   end
 
   def package_installed?
-    new_resource.package && npm_package_installed?(new_resource.package, new_resource.version, new_resource.path, new_resource.npm_token)
+    new_resource.package && npm_package_installed?(new_resource.package, new_resource.version, new_resource.path, npm_env_vars)
   end
 
   def no_auto_update?
@@ -90,7 +90,7 @@ action_class do
 
   def npm_options
     options = ''
-    options << ' -global' unless new_resource.path
+    options << ' --location=global' unless new_resource.path
     new_resource.options.each do |option|
       options << " #{option}"
     end
