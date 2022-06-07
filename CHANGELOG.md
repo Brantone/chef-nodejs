@@ -1,5 +1,9 @@
 # NodeJS Cookbook Changelog
 
+## 4007.3.3 - Unique version
+
+- To compensate for NPM CLI deprecating -global, move to recommended --location=global param
+
 ## 7.3.3 - *2021-08-30*
 
 - Standardise files with files in sous-chefs/repo-management
